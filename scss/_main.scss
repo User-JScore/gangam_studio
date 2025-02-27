@@ -1,0 +1,491 @@
+.container__main {
+  display: grid;
+  grid-template-columns: calc(33.333% + 80px) calc(33.333% - 40px) calc(
+      33.333% - 40px
+    );
+  grid-template-rows: 100dvh 50dvh 50dvh 25dvh;
+  grid-template-areas:
+    "home home home"
+    "about partners ."
+    "projects projects ."
+    "footer footer footer";
+  position: relative;
+
+  &__home {
+    grid-area: home;
+    height: 100dvh;
+    background-image: url("../img/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__titlebox {
+      margin: 200px 20px 20px 100px;
+      color: white;
+      display: grid;
+      grid-template-areas:
+        "design"
+        "gongam";
+
+      #design {
+        font-size: 2.5em;
+        grid-area: design;
+        text-align: start;
+        text-shadow: 15px 10px 10px $backdack;
+      }
+
+      #gongam {
+        font-size: 4.6em;
+        grid-area: gongam;
+        text-align: start;
+        text-shadow: 15px 10px 10px $backdack;
+      }
+
+      // #studio {
+      //   font-size: 4em;
+      //   grid-area: studio;
+      //   text-align: end;
+      //   text-shadow: 15px 10px 10px $backdack;
+      // }
+    }
+
+    &__buttonbox {
+      position: absolute;
+      bottom: 40px;
+      left: 100px;
+      width: 20dvw;
+      max-width: 200px;
+      height: 6dvh;
+      background-color: $backdarktr;
+      backdrop-filter: blur(10px);
+      border-radius: 5dvh;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        font-size: 18px;
+        color: $textlight;
+      }
+
+      &:hover {
+        box-shadow: 10px 10px 10px $backdack;
+        transform: translateX(-5px) translateY(-5px);
+
+        span {
+          color: $textlight;
+        }
+      }
+    }
+  }
+
+  &__about {
+    grid-area: about;
+    background-image: url("../img/about.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px 5px 5px 85px;
+
+    &__titlebox {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      overflow: hidden;
+      color: $textlight;
+      transition: all 0.7s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      h3 {
+        position: relative;
+        top: 80%;
+        width: 100%;
+        font-size: 28px;
+        margin-bottom: 8px;
+        text-shadow: 10px 10px 10px $backdack;
+        color: $backdack;
+        transition: all 0.5s;
+      }
+
+      p {
+        visibility: hidden;
+        font-size: 14px;
+        text-align: justify;
+        transition: all 0.3s;
+        margin-bottom: 8px;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $backdack;
+        background-color: $backlight;
+        width: 60%;
+        height: 15%;
+        border-radius: 7dvw;
+        margin: 0 auto;
+        visibility: hidden;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $backdarktr;
+          color: $textlight;
+          box-shadow: 5px 5px 10px $backdack;
+          transform: translateX(-3px) translateY(-3px);
+        }
+      }
+
+      &:hover {
+        background-color: $backdarktr;
+        backdrop-filter: blur(10px);
+
+        h3 {
+          top: 0;
+          font-size: 28px;
+          color: $textlight;
+        }
+
+        p {
+          visibility: visible;
+        }
+
+        a {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__projects {
+    grid-area: projects;
+    background-image: url("../img/projects.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
+    transition: background-image 0.3s;
+
+    &__contentbox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      // background-color: $backlight;
+      // backdrop-filter: blur(5px);
+
+      h3 {
+        width: 100%;
+        font-size: 28px;
+        text-align: end;
+        text-shadow: 10px 10px 10px $backdack;
+        color: $textlight;
+      }
+
+      a {
+        position: absolute;
+        bottom: 20px;
+        left: 100px;
+        color: $textlight;
+        max-width: 180px;
+        width: 20dvw;
+        height: 30px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        font-size: 16px;
+        background-color: $backdarktr;
+        backdrop-filter: blur(5px);
+        transform: translateX(-500px);
+
+        &:hover {
+          background-color: $backlight;
+          color: $backdack;
+          box-shadow: 5px 5px 10px $backdack;
+          transform: translateX(-3px) translateY(-3px);
+        }
+      }
+
+      &:hover {
+        a {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  &__partners {
+    grid-area: partners;
+    background-image: url("../img/partners.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
+
+    &__contentbox {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      overflow: hidden;
+      transition: all 0.7s;
+
+      h3 {
+        position: relative;
+        top: 70%;
+        width: 100%;
+        font-size: 28px;
+        margin-bottom: 8px;
+        text-shadow: 10px 10px 10px $backdack;
+        transition: all 0.5s;
+        color: $textlight;
+      }
+
+      &__list {
+        width: 100%;
+        height: 65%;
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        overflow: hidden;
+        transition: all 0.3s;
+
+        div {
+          width: 30%;
+          height: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__item1 {
+          background-image: url("../img/samsung.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &__item2 {
+          background-image: url("../img/lg.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &__item3 {
+          background-image: url("../img/miele.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &__item4 {
+          background-image: url("../img/mcm.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &__item5 {
+          background-image: url("../img/smeg.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &__item6 {
+          background-image: url("../img/bosch.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &:hover {
+        background-color: $backlight;
+        backdrop-filter: blur(5px);
+
+        h3 {
+          color: $backdack;
+          top: 0;
+        }
+
+        div {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    position: absolute;
+    right: 0;
+    top: 100dvh;
+    width: calc(33.333% - 40px);
+    height: 100dvh;
+    background-image: url("../img/contacts.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
+
+    &__contentbox {
+      background-color: $backdarktr;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      backdrop-filter: blur(10px);
+      color: $textlight;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: 28px;
+        text-shadow: 10px 10px 10px $backdack;
+        width: 100%;
+      }
+
+      &__content {
+        font-size: 14px;
+      }
+
+      &__media {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+          cursor: pointer;
+          transition: all 0.3s;
+
+          svg {
+            fill: $textlight;
+            border-radius: 10px;
+          }
+
+          &:hover {
+            filter: drop-shadow(10px 10px 10px $backdack);
+            transform: translateX(-5px) translateY(-5px);
+
+            svg {
+              fill: $activebutton;
+            }
+          }
+        }
+      }
+
+      &__map {
+        width: 100%;
+        height: 60%;
+      }
+    }
+  }
+
+  &__footer {
+    grid-area: footer;
+    padding: 5px 5px 5px 85px;
+
+    &__contentbox {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      display: flex;
+
+      &__logo-media {
+        width: 50%;
+        height: 100%;
+        position: relative;
+
+        &__logo {
+          position: relative;
+          width: 100%;
+          height: 50%;
+          background-image: url("../img/logo.png");
+          background-size: contain;
+          background-position: left;
+          background-repeat: no-repeat;
+
+          h1 {
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            color: $backlight;
+            font-size: 23px;
+            right: 50%;
+          }
+        }
+
+        &__media {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 20%;
+          position: absolute;
+          right: 0;
+          top: 10%;
+
+          svg {
+            fill: $backlight;
+            border-radius: 10px;
+          }
+
+          a {
+            transition: all 0.3s;
+
+            &:hover {
+              filter: drop-shadow(10px 10px 10px $backdack);
+              transform: translateX(-5px) translateY(-5px);
+
+              svg {
+                fill: $activebutton;
+              }
+            }
+          }
+        }
+
+        &__copy {
+          color: $backlight;
+          font-size: 12px;
+          text-align: center;
+          margin-top: 15%;
+        }
+      }
+
+      &__menu {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          color: $backlight;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $activebutton;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

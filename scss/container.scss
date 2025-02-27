@@ -1,0 +1,28 @@
+@import "./var";
+@import "./header";
+@import "./main";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.container {
+  &__header {
+    width: 80px;
+    height: 100dvh;
+    background-color: $backlight;
+    position: fixed;
+    z-index: 100;
+  }
+
+  &__main {
+    background-color: $backdack;
+    width: 100%;
+    height: auto;
+  }
+}
