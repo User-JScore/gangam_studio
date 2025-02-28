@@ -133,21 +133,22 @@
 .container__main {
   display: grid;
   grid-template-columns: calc(33.333% + 80px) calc(33.333% - 40px) calc(33.333% - 40px);
-  grid-template-rows: 100dvh 50dvh 50dvh 25dvh;
-  grid-template-areas: "home home home" "about partners ." "projects projects ." "footer footer footer";
+  grid-template-areas: "home home home" "about partners contacts" "projects projects contacts" "footer footer footer";
   position: relative;
 }
 .container__main__home {
   grid-area: home;
   height: 100dvh;
+  min-height: 500px;
   background-image: url("../img/home.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
 }
 .container__main__home__titlebox {
-  margin: 200px 20px 20px 100px;
+  margin: 170px 20px 20px 100px;
   color: white;
   display: grid;
   grid-template-areas: "design" "gongam";
@@ -187,6 +188,8 @@
   align-items: center;
   transition: all 0.5s;
   font-size: 18px;
+}
+.container__main__home__buttonbox span a {
   color: rgb(234, 225, 213);
 }
 .container__main__home__buttonbox:hover {
@@ -197,6 +200,8 @@
   color: rgb(234, 225, 213);
 }
 .container__main__about {
+  height: 50dvh;
+  min-height: 300px;
   grid-area: about;
   background-image: url("../img/about.jpg");
   background-position: center;
@@ -217,8 +222,9 @@
 }
 .container__main__about__titlebox h3 {
   position: relative;
-  top: 80%;
+  top: 67%;
   width: 100%;
+  height: 40px;
   font-size: 28px;
   margin-bottom: 8px;
   text-shadow: 10px 10px 10px rgb(24, 21, 39);
@@ -268,6 +274,8 @@
   visibility: visible;
 }
 .container__main__projects {
+  height: 50dvh;
+  min-height: 300px;
   grid-area: projects;
   background-image: url("../img/projects.png");
   background-repeat: no-repeat;
@@ -318,12 +326,15 @@
   transform: translateX(0);
 }
 .container__main__partners {
+  height: 50dvh;
+  min-height: 300px;
   grid-area: partners;
   background-image: url("../img/partners.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 5px;
+  display: flex;
 }
 .container__main__partners__contentbox {
   display: block;
@@ -335,8 +346,9 @@
 }
 .container__main__partners__contentbox h3 {
   position: relative;
-  top: 70%;
+  top: 75%;
   width: 100%;
+  height: 40px;
   font-size: 28px;
   margin-bottom: 8px;
   text-shadow: 10px 10px 10px rgb(24, 21, 39);
@@ -409,11 +421,9 @@
   display: flex;
 }
 .container__main__contacts {
-  position: absolute;
-  right: 0;
-  top: 100dvh;
-  width: calc(33.333% - 40px);
+  grid-area: contacts;
   height: 100dvh;
+  min-height: 600px;
   background-image: url("../img/contacts.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -421,17 +431,18 @@
   padding: 5px;
 }
 .container__main__contacts__contentbox {
-  background-color: rgba(24, 21, 39, 0.6);
   width: 100%;
   height: 100%;
   padding: 5px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  color: rgb(234, 225, 213);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  color: rgb(234, 225, 213);
+  transition: all 0.5s;
+}
+.container__main__contacts__contentbox div {
+  visibility: hidden;
 }
 .container__main__contacts__contentbox h3 {
   font-size: 28px;
@@ -440,20 +451,23 @@
 }
 .container__main__contacts__contentbox__content {
   font-size: 14px;
+  text-align: start;
+  width: 100%;
 }
 .container__main__contacts__contentbox__media {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
+  gap: 20px;
 }
 .container__main__contacts__contentbox__media a {
   cursor: pointer;
   transition: all 0.3s;
 }
 .container__main__contacts__contentbox__media a svg {
-  fill: rgb(234, 225, 213);
+  fill: transparent;
   border-radius: 10px;
 }
 .container__main__contacts__contentbox__media a:hover {
@@ -465,85 +479,66 @@
 }
 .container__main__contacts__contentbox__map {
   width: 100%;
-  height: 60%;
+  height: 50%;
+}
+.container__main__contacts__contentbox:hover {
+  background-color: rgba(24, 21, 39, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.container__main__contacts__contentbox:hover div {
+  visibility: visible;
+}
+.container__main__contacts__contentbox:hover svg {
+  fill: rgb(234, 225, 213);
 }
 .container__main__footer {
+  height: 100px;
   grid-area: footer;
-  padding: 5px 5px 5px 85px;
+  padding: 10px 5px 10px 85px;
 }
 .container__main__footer__contentbox {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 90% 10%;
+  grid-template-areas: "logo menu menu" "copy copy copy";
+  gap: 10px;
 }
-.container__main__footer__contentbox__logo-media {
-  width: 50%;
-  height: 100%;
-  position: relative;
-}
-.container__main__footer__contentbox__logo-media__logo {
-  position: relative;
-  width: 100%;
-  height: 50%;
+.container__main__footer__contentbox__logo {
+  grid-area: logo;
+  color: rgba(234, 225, 213, 0.4);
   background-image: url("../img/logo.png");
   background-size: contain;
-  background-position: left;
   background-repeat: no-repeat;
-}
-.container__main__footer__contentbox__logo-media__logo h1 {
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  color: rgba(234, 225, 213, 0.4);
-  font-size: 23px;
-  right: 50%;
-}
-.container__main__footer__contentbox__logo-media__media {
+  background-position: left;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20%;
-  position: absolute;
-  right: 0;
-  top: 10%;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10%;
 }
-.container__main__footer__contentbox__logo-media__media svg {
-  fill: rgba(234, 225, 213, 0.4);
-  border-radius: 10px;
+.container__main__footer__contentbox__media {
+  grid-area: media;
 }
-.container__main__footer__contentbox__logo-media__media a {
-  transition: all 0.3s;
-}
-.container__main__footer__contentbox__logo-media__media a:hover {
-  filter: drop-shadow(10px 10px 10px rgb(24, 21, 39));
-  transform: translateX(-5px) translateY(-5px);
-}
-.container__main__footer__contentbox__logo-media__media a:hover svg {
-  fill: rgb(172, 15, 15);
-}
-.container__main__footer__contentbox__logo-media__copy {
+.container__main__footer__contentbox__copy {
+  grid-area: copy;
+  text-align: center;
   color: rgba(234, 225, 213, 0.4);
   font-size: 12px;
-  text-align: center;
-  margin-top: 15%;
 }
 .container__main__footer__contentbox__menu {
-  width: 50%;
-  height: 100%;
+  grid-area: menu;
   display: flex;
-  flex-direction: column;
-  gap: 5%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .container__main__footer__contentbox__menu a {
   color: rgba(234, 225, 213, 0.4);
+  font-size: 14px;
   transition: all 0.3s;
 }
 .container__main__footer__contentbox__menu a:hover {
-  color: rgb(172, 15, 15);
-  font-weight: 600;
+  color: rgb(234, 225, 213);
+  border-bottom: 1px solid rgb(234, 225, 213);
 }
 
 * {

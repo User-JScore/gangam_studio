@@ -1,0 +1,155 @@
+@import "./var";
+@import "./container.scss";
+@import "./_font.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-image: url("../img/partners.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container__aboutpage {
+  width: 100%;
+  height: 180dvh;
+  max-height: 1100px;
+  padding: 20px 20px 20px 100px;
+  position: relative;
+
+  &__aboutbox {
+    height: 35%;
+    min-height: 400px;
+    max-height: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: $backlight;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 35px;
+      color: $backdack;
+    }
+
+    p {
+      text-indent: 10%;
+      font-size: 18px;
+    }
+
+    ul {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 10%;
+
+      li {
+        list-style-type: square;
+      }
+    }
+  }
+
+  &__teambox {
+    height: 55%;
+    min-height: 500px;
+    max-height: 600px;
+    border-radius: 20px;
+    background-color: $backdarktr;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      font-size: 35px;
+      color: $textlight;
+    }
+
+    &__personbox {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      #person {
+        width: 40%;
+        height: 100%;
+        background-image: url("../img/ceo.png");
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        filter: drop-shadow(0 -15px 20px $backlight);
+        position: absolute;
+        right: 0;
+        transition: all 0.3s;
+      }
+
+      #arrow__position {
+        width: 13%;
+        height: 13%;
+        background-image: url("../img/arrow.png");
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 10%;
+        right: 30%;
+      }
+
+      #arrow__name {
+        width: 13%;
+        height: 13%;
+        background-image: url("../img/arrow.png");
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 70%;
+        right: 40%;
+        transform: scale(1, -1) rotate(-20deg);
+      }
+
+      #position {
+        color: $textlight;
+        font-size: 40px;
+        position: absolute;
+        top: 5%;
+        right: 45%;
+        font-family: "Bradleys";
+        transition: all 0.3s;
+      }
+
+      #name {
+        color: $textlight;
+        font-size: 30px;
+        position: absolute;
+        top: 73%;
+        right: 55%;
+        font-family: "Bradleys";
+        transition: all 0.3s;
+      }
+
+      p {
+        position: absolute;
+        top: 25%;
+        width: 60%;
+        color: $textlight;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

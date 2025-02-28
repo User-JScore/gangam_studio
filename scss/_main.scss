@@ -3,25 +3,27 @@
   grid-template-columns: calc(33.333% + 80px) calc(33.333% - 40px) calc(
       33.333% - 40px
     );
-  grid-template-rows: 100dvh 50dvh 50dvh 25dvh;
+  // grid-template-rows: 100dvh 50dvh 50dvh 25dvh;
   grid-template-areas:
     "home home home"
-    "about partners ."
-    "projects projects ."
+    "about partners contacts"
+    "projects projects contacts"
     "footer footer footer";
   position: relative;
 
   &__home {
     grid-area: home;
     height: 100dvh;
+    min-height: 500px;
     background-image: url("../img/home.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
 
     &__titlebox {
-      margin: 200px 20px 20px 100px;
+      margin: 170px 20px 20px 100px;
       color: white;
       display: grid;
       grid-template-areas:
@@ -72,7 +74,10 @@
         align-items: center;
         transition: all 0.5s;
         font-size: 18px;
-        color: $textlight;
+
+        a {
+          color: $textlight;
+        }
       }
 
       &:hover {
@@ -87,6 +92,8 @@
   }
 
   &__about {
+    height: 50dvh;
+    min-height: 300px;
     grid-area: about;
     background-image: url("../img/about.jpg");
     background-position: center;
@@ -107,8 +114,9 @@
 
       h3 {
         position: relative;
-        top: 80%;
+        top: 67%;
         width: 100%;
+        height: 40px;
         font-size: 28px;
         margin-bottom: 8px;
         text-shadow: 10px 10px 10px $backdack;
@@ -167,6 +175,8 @@
   }
 
   &__projects {
+    height: 50dvh;
+    min-height: 300px;
     grid-area: projects;
     background-image: url("../img/projects.png");
     background-repeat: no-repeat;
@@ -226,12 +236,15 @@
   }
 
   &__partners {
+    height: 50dvh;
+    min-height: 300px;
     grid-area: partners;
     background-image: url("../img/partners.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 5px;
+    display: flex;
 
     &__contentbox {
       display: block;
@@ -243,8 +256,9 @@
 
       h3 {
         position: relative;
-        top: 70%;
+        top: 75%;
         width: 100%;
+        height: 40px;
         font-size: 28px;
         margin-bottom: 8px;
         text-shadow: 10px 10px 10px $backdack;
@@ -330,11 +344,9 @@
   }
 
   &__contacts {
-    position: absolute;
-    right: 0;
-    top: 100dvh;
-    width: calc(33.333% - 40px);
+    grid-area: contacts;
     height: 100dvh;
+    min-height: 600px;
     background-image: url("../img/contacts.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -342,16 +354,19 @@
     padding: 5px;
 
     &__contentbox {
-      background-color: $backdarktr;
       width: 100%;
       height: 100%;
       padding: 5px;
-      backdrop-filter: blur(10px);
-      color: $textlight;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      color: $textlight;
+      transition: all 0.5s;
+
+      div {
+        visibility: hidden;
+      }
 
       h3 {
         font-size: 28px;
@@ -361,21 +376,24 @@
 
       &__content {
         font-size: 14px;
+        text-align: start;
+        width: 100%;
       }
 
       &__media {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: start;
         align-items: center;
+        gap: 20px;
 
         a {
           cursor: pointer;
           transition: all 0.3s;
 
           svg {
-            fill: $textlight;
+            fill: transparent;
             border-radius: 10px;
           }
 
@@ -392,97 +410,76 @@
 
       &__map {
         width: 100%;
-        height: 60%;
+        height: 50%;
+      }
+
+      &:hover {
+        background-color: $backdarktr;
+        backdrop-filter: blur(10px);
+
+        div {
+          visibility: visible;
+        }
+
+        svg {
+          fill: $textlight;
+        }
       }
     }
   }
 
   &__footer {
+    height: 100px;
     grid-area: footer;
-    padding: 5px 5px 5px 85px;
+    padding: 10px 5px 10px 85px;
 
     &__contentbox {
-      width: 100%;
-      height: 100%;
-      padding: 5px;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 90% 10%;
+      grid-template-areas:
+        "logo menu menu"
+        "copy copy copy";
+      gap: 10px;
 
-      &__logo-media {
-        width: 50%;
-        height: 100%;
-        position: relative;
+      &__logo {
+        grid-area: logo;
+        color: $backlight;
+        background-image: url("../img/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 10%;
+      }
 
-        &__logo {
-          position: relative;
-          width: 100%;
-          height: 50%;
-          background-image: url("../img/logo.png");
-          background-size: contain;
-          background-position: left;
-          background-repeat: no-repeat;
+      &__media {
+        grid-area: media;
+      }
 
-          h1 {
-            position: absolute;
-            top: 10%;
-            left: 30%;
-            color: $backlight;
-            font-size: 23px;
-            right: 50%;
-          }
-        }
-
-        &__media {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 20%;
-          position: absolute;
-          right: 0;
-          top: 10%;
-
-          svg {
-            fill: $backlight;
-            border-radius: 10px;
-          }
-
-          a {
-            transition: all 0.3s;
-
-            &:hover {
-              filter: drop-shadow(10px 10px 10px $backdack);
-              transform: translateX(-5px) translateY(-5px);
-
-              svg {
-                fill: $activebutton;
-              }
-            }
-          }
-        }
-
-        &__copy {
-          color: $backlight;
-          font-size: 12px;
-          text-align: center;
-          margin-top: 15%;
-        }
+      &__copy {
+        grid-area: copy;
+        text-align: center;
+        color: $backlight;
+        font-size: 12px;
       }
 
       &__menu {
-        width: 50%;
-        height: 100%;
+        grid-area: menu;
         display: flex;
-        flex-direction: column;
-        gap: 5%;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
 
         a {
           color: $backlight;
+          font-size: 14px;
           transition: all 0.3s;
 
           &:hover {
-            color: $activebutton;
-            font-weight: 600;
+            color: $textlight;
+            border-bottom: 1px solid $textlight;
           }
         }
       }

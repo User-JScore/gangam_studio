@@ -1,0 +1,217 @@
+@import "./var";
+@import "./container.scss";
+@import "./_font.scss";
+
+.container__projectspage {
+  background-attachment: fixed;
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:
+      calc((100% / 3) + 80px)
+      calc((100% / 3) - 40px)
+      calc((100% / 3) - 40px);
+
+    article {
+      height: 40dvh;
+      min-height: 250px;
+      max-height: 600px;
+
+      div {
+        position: relative;
+        transition: all 0.3s;
+
+        h1 {
+          color: $textlight;
+          font-size: 23px;
+          text-shadow: 10px 10px 10px $backdack;
+          margin-bottom: 20px;
+        }
+
+        p {
+          visibility: hidden;
+          text-align: justify;
+        }
+
+        button {
+          visibility: hidden;
+        }
+      }
+
+      &:hover {
+        div {
+          width: 100%;
+          height: 100%;
+          background-color: $backdarktr;
+          backdrop-filter: blur(5px);
+          padding: 5px;
+
+          p {
+            visibility: visible;
+            color: $textlight;
+          }
+
+          button {
+            visibility: visible;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: $backdack;
+            background-color: $backlight;
+            height: 30px;
+            width: 70%;
+            max-width: 150px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: $backdack;
+              color: $textlight;
+              transform: translateX(-5px) translateY(-5px);
+              box-shadow: 10px 10px 10px $backdack;
+            }
+          }
+        }
+      }
+    }
+
+    &__item1 {
+      grid-column: span 2;
+      background-image: url("../img/projects/001/1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px 10px 10px 90px;
+    }
+
+    &__item2 {
+      background-image: url("../img/projects/002/1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px;
+    }
+
+    &__item3 {
+      background-image: url("../img/projects/003/1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px 10px 10px 90px;
+    }
+
+    &__item4 {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: 80dvh !important;
+      background-image: url("../img/projects/004/1.jpg");
+      background-size: cover;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      padding: 10px;
+    }
+
+    &__item5 {
+      grid-row: span 2;
+      height: 80dvh !important;
+      background-image: url("../img/projects/005/1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px 10px 10px 90px;
+    }
+
+    &__item6 {
+      grid-column: span 2;
+      background-image: url("../img/projects/006/1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px;
+    }
+  }
+}
+
+.container__popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: $backdarktr;
+  backdrop-filter: blur(2px) grayscale(80%);
+  position: fixed;
+  top: 0;
+  //   z-index: 100;
+
+  &__closebutton {
+    width: 25px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: $textlight;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    transition: background 0.3s;
+
+    &::before {
+      content: "";
+      transform: rotate(90deg);
+      width: 25px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: $textlight;
+      position: absolute;
+      transition: background 0.3s;
+    }
+
+    &:hover,
+    &:hover::before {
+      background-color: $activebutton;
+    }
+  }
+
+  &__contentbox {
+    width: calc(100dvh - 100px);
+    height: calc(100dvw - 180px);
+    margin: 50px 50px 50px 130px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    transform: rotate(-90deg) translateY(calc((100dvh - 100px) * (-1)));
+    transform-origin: top right;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $backlight;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $textlight;
+      border-radius: 5px;
+    }
+
+    &__item {
+      display: none;
+      flex: none;
+      width: 100%;
+      height: calc(100dvh - 105px);
+      text-align: center;
+      transform: rotate(90deg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.container__popup-active {
+  display: none !important;
+}
