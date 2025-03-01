@@ -1,10 +1,10 @@
 const projectsBlock = document.querySelector(".container__main__projects");
 
 let walls = [
-  "./img/projects.png",
-  "./img/projects2.jpg",
-  "./img/projects3.jpg",
-  "./img/projects4.jpg",
+  "./img/projects.webp",
+  "./img/projects2.webp",
+  "./img/projects3.webp",
+  "./img/projects4.webp",
 ];
 
 let counter = 0;

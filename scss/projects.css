@@ -58,7 +58,7 @@
 .container__header__logobox__logo {
   position: absolute;
   right: 0;
-  background-image: url("../img/logo.png");
+  background-image: url("../img/logo.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -140,7 +140,7 @@
   grid-area: home;
   height: 100dvh;
   min-height: 500px;
-  background-image: url("../img/home.jpg");
+  background-image: url("../img/home.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -203,7 +203,7 @@
   height: 50dvh;
   min-height: 300px;
   grid-area: about;
-  background-image: url("../img/about.jpg");
+  background-image: url("../img/about.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -277,7 +277,7 @@
   height: 50dvh;
   min-height: 300px;
   grid-area: projects;
-  background-image: url("../img/projects.png");
+  background-image: url("../img/projects.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -329,7 +329,7 @@
   height: 50dvh;
   min-height: 300px;
   grid-area: partners;
-  background-image: url("../img/partners.jpg");
+  background-image: url("../img/partners.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -373,37 +373,37 @@
   align-items: center;
 }
 .container__main__partners__contentbox__list__item1 {
-  background-image: url("../img/samsung.png");
+  background-image: url("../img/samsung.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .container__main__partners__contentbox__list__item2 {
-  background-image: url("../img/lg.png");
+  background-image: url("../img/lg.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .container__main__partners__contentbox__list__item3 {
-  background-image: url("../img/miele.png");
+  background-image: url("../img/miele.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .container__main__partners__contentbox__list__item4 {
-  background-image: url("../img/mcm.png");
+  background-image: url("../img/mcm.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .container__main__partners__contentbox__list__item5 {
-  background-image: url("../img/smeg.png");
+  background-image: url("../img/smeg.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .container__main__partners__contentbox__list__item6 {
-  background-image: url("../img/bosch.png");
+  background-image: url("../img/bosch.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -424,7 +424,7 @@
   grid-area: contacts;
   height: 100dvh;
   min-height: 600px;
-  background-image: url("../img/contacts.jpg");
+  background-image: url("../img/contacts.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -507,7 +507,7 @@
 .container__main__footer__contentbox__logo {
   grid-area: logo;
   color: rgba(234, 225, 213, 0.4);
-  background-image: url("../img/logo.png");
+  background-image: url("../img/logo.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
@@ -633,21 +633,21 @@
 }
 .container__projectspage__list__item1 {
   grid-column: span 2;
-  background-image: url("../img/projects/001/1.jpg");
+  background-image: url("../img/projects/001/1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 10px 10px 10px 90px;
 }
 .container__projectspage__list__item2 {
-  background-image: url("../img/projects/002/1.jpg");
+  background-image: url("../img/projects/002/1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 10px;
 }
 .container__projectspage__list__item3 {
-  background-image: url("../img/projects/003/1.jpg");
+  background-image: url("../img/projects/003/1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -657,7 +657,7 @@
   grid-column: span 2;
   grid-row: span 2;
   height: 80dvh !important;
-  background-image: url("../img/projects/004/1.jpg");
+  background-image: url("../img/projects/004/1.webp");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -666,7 +666,7 @@
 .container__projectspage__list__item5 {
   grid-row: span 2;
   height: 80dvh !important;
-  background-image: url("../img/projects/005/1.jpg");
+  background-image: url("../img/projects/005/1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -674,7 +674,7 @@
 }
 .container__projectspage__list__item6 {
   grid-column: span 2;
-  background-image: url("../img/projects/006/1.jpg");
+  background-image: url("../img/projects/006/1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

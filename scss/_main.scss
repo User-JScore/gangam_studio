@@ -15,7 +15,7 @@
     grid-area: home;
     height: 100dvh;
     min-height: 500px;
-    background-image: url("../img/home.jpg");
+    background-image: url("../img/home.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,7 +95,7 @@
     height: 50dvh;
     min-height: 300px;
     grid-area: about;
-    background-image: url("../img/about.jpg");
+    background-image: url("../img/about.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -178,7 +178,7 @@
     height: 50dvh;
     min-height: 300px;
     grid-area: projects;
-    background-image: url("../img/projects.png");
+    background-image: url("../img/projects.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -239,7 +239,7 @@
     height: 50dvh;
     min-height: 300px;
     grid-area: partners;
-    background-image: url("../img/partners.jpg");
+    background-image: url("../img/partners.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -285,42 +285,42 @@
         }
 
         &__item1 {
-          background-image: url("../img/samsung.png");
+          background-image: url("../img/samsung.webp");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
         }
 
         &__item2 {
-          background-image: url("../img/lg.png");
+          background-image: url("../img/lg.webp");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
         }
 
         &__item3 {
-          background-image: url("../img/miele.png");
+          background-image: url("../img/miele.webp");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
         }
 
         &__item4 {
-          background-image: url("../img/mcm.png");
+          background-image: url("../img/mcm.webp");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
         }
 
         &__item5 {
-          background-image: url("../img/smeg.png");
+          background-image: url("../img/smeg.webp");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
         }
 
         &__item6 {
-          background-image: url("../img/bosch.png");
+          background-image: url("../img/bosch.webp");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -347,7 +347,7 @@
     grid-area: contacts;
     height: 100dvh;
     min-height: 600px;
-    background-image: url("../img/contacts.jpg");
+    background-image: url("../img/contacts.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -445,7 +445,7 @@
       &__logo {
         grid-area: logo;
         color: $backlight;
-        background-image: url("../img/logo.png");
+        background-image: url("../img/logo.webp");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: left;

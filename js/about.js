@@ -2,7 +2,11 @@ const person = document.querySelector("#person");
 const position = document.querySelector("#position");
 const personName = document.querySelector("#name");
 const overview = document.querySelector("#overview");
-const teamPersons = ["./img/ceo.png", "./img/designer.png", "./img/other.png"];
+const teamPersons = [
+  "./img/ceo.webp",
+  "./img/designer.webp",
+  "./img/other.webp",
+];
 const positions = ["CEO", "Designer", "Other"];
 const names = ["John Doe", "Jane Doe", "Kim Doe"];
 const overviews = [

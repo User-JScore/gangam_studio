@@ -21,8 +21,7 @@ projectButtons.forEach((button, i) => {
       projectPhoto[j].style.display = "block";
       projectPhoto[j].style.backgroundImage = `url('./img/projects/00${i + 1}/${
         j + 1
-      }.jpg')`;
-      window.scrollTo(0, 0);
+      }.webp')`;
     }
   });
 });
@@ -31,6 +30,11 @@ projectPopup.addEventListener("click", (element) => {
   if (element.target === projectPopup) {
     projectPopup.style.display = "none";
     body.style.overflowY = "auto";
+
+    for (let j = 0; j < 20; j++) {
+      projectPhoto[j].style.display = "none";
+      projectPhoto[j].style.backgroundImage = "";
+    }
   }
 });
 
@@ -38,5 +42,10 @@ projectCloseButton.addEventListener("click", (element) => {
   if (element.target === projectCloseButton) {
     projectPopup.style.display = "none";
     body.style.overflowY = "auto";
+
+    for (let j = 0; j < 20; j++) {
+      projectPhoto[j].style.display = "none";
+      projectPhoto[j].style.backgroundImage = "";
+    }
   }
 });
