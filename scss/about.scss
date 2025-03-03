@@ -47,6 +47,7 @@ body {
     p {
       text-indent: 10%;
       font-size: 18px;
+      text-align: justify;
     }
 
     ul {
@@ -55,9 +56,11 @@ body {
       flex-direction: column;
       justify-content: space-between;
       margin-left: 10%;
+      font-size: 18px;
 
       li {
         list-style-type: square;
+        text-align: justify;
       }
     }
   }
@@ -149,6 +152,75 @@ body {
         width: 60%;
         color: $textlight;
         transition: all 0.3s;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container__aboutpage {
+    padding: 10px;
+    max-height: 120px;
+
+    &__aboutbox {
+      max-width: 600px;
+      gap: 10px;
+
+      h1 {
+        text-align: end;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      ul {
+        font-size: 16px;
+      }
+    }
+
+    &__teambox {
+      h1 {
+        text-align: end;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      &__personbox {
+        #arrow__position,
+        #arrow__name {
+          display: none;
+        }
+
+        #position {
+          top: 30%;
+          right: inherit;
+          left: 5%;
+        }
+
+        #name {
+          top: 30%;
+          right: 5%;
+          text-align: end;
+        }
+
+        #person {
+          position: absolute;
+          bottom: 0;
+          left: 10%;
+          width: 80%;
+          height: 70%;
+          z-index: 99;
+        }
+
+        #overview {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          text-align: justify;
+        }
       }
     }
   }

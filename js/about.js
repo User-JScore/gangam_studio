@@ -10,7 +10,7 @@ const teamPersons = [
 const positions = ["CEO", "Designer", "Other"];
 const names = ["John Doe", "Jane Doe", "Kim Doe"];
 const overviews = [
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, libero quia tempora non fugit vel at voluptatem esse sapiente odit eveniet tenetur ratione repudiandae reprehenderit. Aliquam blanditiis recusandae nulla dolores.",
+  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, libero quia tempora non fugit vel at voluptatem esse eveniet tenetur ratione repudiandae reprehenderit.",
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, libero quia tempora non fugit vel at voluptatem esse sapiente odit eveniet tenetur ratione repudiandae reprehenderit.",
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
 ];

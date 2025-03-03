@@ -147,3 +147,37 @@
 .container__header__blur-active {
   display: block !important;
 }
+
+@media (max-width: 767px) {
+  .container__header {
+    &__blur {
+      display: none;
+    }
+
+    &__buttonbox {
+      top: 20px;
+      right: -60px;
+    }
+  }
+
+  .container__header-active {
+    width: 100% !important;
+  }
+
+  .container__header__buttonbox__button-active {
+    transform: translateX(-80px) rotate(45deg);
+
+    &::after {
+      transform: rotate(-90deg);
+    }
+
+    &::before {
+      transform: translate(0);
+      visibility: hidden;
+    }
+  }
+
+  .container__header__blur-active {
+    display: none !important;
+  }
+}

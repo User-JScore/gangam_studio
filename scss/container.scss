@@ -15,7 +15,6 @@
   &__header {
     width: 80px;
     height: 100dvh;
-    background-color: $backlight;
     position: fixed;
     z-index: 100;
   }
@@ -24,5 +23,13 @@
     background-color: $backdack;
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    &__header {
+      width: 0;
+    }
   }
 }
