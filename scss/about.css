@@ -179,13 +179,13 @@
   grid-template-areas: "design" "gongam";
 }
 .container__main__home__titlebox #design {
-  font-size: 7dvh;
+  font-size: 6dvh;
   grid-area: design;
   text-align: start;
   text-shadow: 15px 10px 10px rgb(24, 21, 39);
 }
 .container__main__home__titlebox #gongam {
-  font-size: 13dvh;
+  font-size: 11dvh;
   grid-area: gongam;
   text-align: start;
   text-shadow: 15px 10px 10px rgb(24, 21, 39);
@@ -250,7 +250,7 @@
 }
 .container__main__about__titlebox h3 {
   position: relative;
-  top: 67%;
+  top: 80%;
   width: 100%;
   height: 40px;
   font-size: 28px;
@@ -381,7 +381,7 @@
 }
 .container__main__partners__contentbox h3 {
   position: relative;
-  top: 75%;
+  top: 80%;
   width: 100%;
   height: 40px;
   font-size: 28px;
