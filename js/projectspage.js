@@ -9,43 +9,64 @@ const body = document.querySelector("body");
 const projectPhoto = document.querySelectorAll(
   ".container__popup__contentbox__item"
 );
+const galleryBox = document.getElementById("popup__gallery");
 
-const files = [6, 8, 20, 15, 19, 19];
+async function loadJSONData() {
+  try {
+    const response = await fetch("./js/allObjectsDir.json");
+    const jsonDataDir = await response.json();
 
-projectButtons.forEach((button, i) => {
-  button.addEventListener("click", () => {
-    projectPopup.style.display = "block";
-    body.style.overflowY = "hidden";
+    projectButtons.forEach((button, counter) => {
+      button.addEventListener("click", () => {
+        projectPopup.style.display = "block";
+        body.style.overflowY = "hidden";
 
-    for (let j = 0; j < files[i]; j++) {
-      projectPhoto[j].style.display = "block";
-      projectPhoto[j].style.backgroundImage = `url('./img/projects/00${i + 1}/${
-        j + 1
-      }.webp')`;
-    }
-  });
-});
+        async function createPhotosList() {
+          try {
+            const responsePhotosinDir = await fetch(
+              `./js/${jsonDataDir[counter]}.json`
+            );
+            const jsonPhotosinDir = await responsePhotosinDir.json();
+
+            jsonPhotosinDir.forEach((photo) => {
+              let cardForPhoto = document.createElement("article");
+
+              galleryBox.appendChild(cardForPhoto);
+              galleryBox.lastElementChild.classList.add(
+                "container__popup__contentbox__item"
+              );
+              galleryBox.lastElementChild.style.display = "block";
+              galleryBox.lastElementChild.style.backgroundImage = `url('./img/projects/${jsonDataDir[counter]}/${photo}')`;
+            });
+          } catch (err) {
+            alert("Reload page!");
+            return createPhotosList();
+          }
+        }
+
+        createPhotosList();
+      });
+    });
+  } catch (err) {
+    return loadJSONData();
+  }
+}
+
+loadJSONData();
 
 projectPopup.addEventListener("click", (element) => {
-  if (element.target === projectPopup) {
+  if (
+    element.target === projectPopup ||
+    element.target === projectCloseButton
+  ) {
     projectPopup.style.display = "none";
     body.style.overflowY = "auto";
 
-    for (let j = 0; j < 20; j++) {
-      projectPhoto[j].style.display = "none";
-      projectPhoto[j].style.backgroundImage = "";
-    }
-  }
-});
+    let childCounter = galleryBox.childElementCount;
 
-projectCloseButton.addEventListener("click", (element) => {
-  if (element.target === projectCloseButton) {
-    projectPopup.style.display = "none";
-    body.style.overflowY = "auto";
-
-    for (let j = 0; j < 20; j++) {
-      projectPhoto[j].style.display = "none";
-      projectPhoto[j].style.backgroundImage = "";
+    console.log(childCounter);
+    for (let i = 0; i < childCounter; i++) {
+      galleryBox.removeChild(galleryBox.lastElementChild);
     }
   }
 });
