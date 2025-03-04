@@ -48,7 +48,7 @@ async function loadJSONData() {
       });
     });
   } catch (err) {
-    return loadJSONData();
+    // return loadJSONData();
   }
 }
 
