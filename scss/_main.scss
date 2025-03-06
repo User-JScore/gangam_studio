@@ -497,75 +497,75 @@
   }
 }
 
-@media (max-width: 767px) {
-  .container__main {
-    grid-template-columns: 1fr;
-    grid-template-areas: "home" "about" "partners" "projects" "contacts" "footer";
+// @media (max-width: 767px) {
+//   .container__main {
+//     grid-template-columns: 1fr;
+//     grid-template-areas: "home" "about" "partners" "projects" "contacts" "footer";
 
-    &__home {
-      &__titlebox {
-        font-size: 23px;
-        margin: 150px 0 50px 0;
+//     &__home {
+//       &__titlebox {
+//         font-size: 23px;
+//         margin: 150px 0 50px 0;
 
-        h1 {
-          width: 100%;
-          text-align: center !important;
-        }
-      }
+//         h1 {
+//           width: 100%;
+//           text-align: center !important;
+//         }
+//       }
 
-      &__buttonbox {
-        left: calc(50% - 20dvw);
-      }
-    }
+//       &__buttonbox {
+//         left: calc(50% - 20dvw);
+//       }
+//     }
 
-    &__about {
-      padding: 5px;
-    }
+//     &__about {
+//       padding: 5px;
+//     }
 
-    &__partners {
-      &__contentbox {
-        &__list {
-          margin-top: 5dvh;
-        }
-      }
-    }
+//     &__partners {
+//       &__contentbox {
+//         &__list {
+//           margin-top: 5dvh;
+//         }
+//       }
+//     }
 
-    &__projects {
-      &__contentbox {
-        a {
-          left: calc(50% - 20dvw);
-        }
-      }
-    }
+//     &__projects {
+//       &__contentbox {
+//         a {
+//           left: calc(50% - 20dvw);
+//         }
+//       }
+//     }
 
-    &__contacts {
-      height: 85dvh;
-      &__contentbox {
-        &__map {
-          height: 70%;
-        }
-      }
-    }
+//     &__contacts {
+//       height: 85dvh;
+//       &__contentbox {
+//         &__map {
+//           height: 70%;
+//         }
+//       }
+//     }
 
-    &__footer {
-      padding: 10px 5px;
+//     &__footer {
+//       padding: 10px 5px;
 
-      &__contentbox {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: "logo menu" "copy copy";
+//       &__contentbox {
+//         grid-template-columns: repeat(2, 1fr);
+//         grid-template-rows: repeat(2, auto);
+//         grid-template-areas: "logo menu" "copy copy";
 
-        &__menu {
-          flex-direction: column;
-          flex-wrap: wrap;
-          justify-content: start;
+//         &__menu {
+//           flex-direction: column;
+//           flex-wrap: wrap;
+//           justify-content: start;
 
-          a {
-            display: inline;
-            font-size: 10px;
-          }
-        }
-      }
-    }
-  }
-}
+//           a {
+//             display: inline;
+//             font-size: 10px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
