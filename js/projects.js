@@ -10,10 +10,11 @@ let walls = [
 let counter = 0;
 
 let timer = setInterval(() => {
-  if (counter < walls.length) {
-    projectsBlock.style.backgroundImage = "url('" + walls[counter] + "')";
-    counter++;
-  } else {
-    counter = 0;
-  }
+  projectsBlock.style.backgroundImage = "url('" + walls[counter] + "')";
+  counter++;
+  if (counter == walls.length) counter = 0;
 }, 4000);
+
+projectsBlock.addEventListener("click", () => {
+  window.open("projects.html");
+});

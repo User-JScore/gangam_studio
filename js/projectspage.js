@@ -9,6 +9,7 @@ const body = document.querySelector("body");
 const projectPhoto = document.querySelectorAll(
   ".container__popup__contentbox__item"
 );
+const projectBoxOpen = document.querySelectorAll(".projectspage__list__item");
 const galleryBox = document.getElementById("popup__gallery");
 
 async function loadJSONData() {
@@ -48,7 +49,7 @@ async function loadJSONData() {
       });
     });
   } catch (err) {
-    // return loadJSONData();
+    return loadJSONData();
   }
 }
 

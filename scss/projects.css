@@ -3,6 +3,8 @@
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   transition: width 0.5s;
+  background-color: rgba(234, 225, 213, 0.4);
+  height: 100%;
 }
 .container__header__blur {
   position: absolute;
@@ -15,7 +17,7 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: calc(50dvh - 80px);
+  top: calc(50vh - 80px);
   right: 20px;
   display: flex;
   justify-content: center;
@@ -50,10 +52,11 @@
 .container__header__logobox {
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 100px;
   background-color: rgb(24, 21, 39);
   position: absolute;
   bottom: 0;
+  padding-top: 10px;
 }
 .container__header__logobox__logo {
   position: absolute;
@@ -62,17 +65,19 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
 }
 .container__header__logobox__corp {
   position: absolute;
-  top: 13px;
+  top: 23px;
   left: 13px;
   color: rgba(234, 225, 213, 0.4);
   font-size: 20px;
   transform: translateX(-120px);
   transition: transform 0.4s;
+  font-weight: 600;
 }
 .container__header__menu {
   position: relative;
@@ -80,7 +85,7 @@
   width: 130px;
   height: 200px;
   padding-left: 10px;
-  transform: translateX(-130px);
+  transform: translateX(-200px);
   transition: transform 0.4s;
 }
 .container__header__menu ul {
@@ -151,6 +156,15 @@
     transform: translate(0);
     visibility: hidden;
   }
+  .container__header__menu {
+    width: 80%;
+  }
+  .container__header__menu ul {
+    gap: 20px;
+  }
+  .container__header__menu ul li a {
+    font-size: 4vh;
+  }
   .container__header__blur-active {
     display: none !important;
   }
@@ -163,7 +177,7 @@
 }
 .container__main__home {
   grid-area: home;
-  height: 100dvh;
+  height: 100vh;
   min-height: 500px;
   background-image: url("../img/home.webp");
   background-size: cover;
@@ -171,6 +185,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  transition: all 0.3s;
 }
 .container__main__home__titlebox {
   margin: 170px 20px 20px 100px;
@@ -179,13 +194,13 @@
   grid-template-areas: "design" "gongam";
 }
 .container__main__home__titlebox #design {
-  font-size: 6dvh;
+  font-size: 4vh;
   grid-area: design;
   text-align: start;
   text-shadow: 15px 10px 10px rgb(24, 21, 39);
 }
 .container__main__home__titlebox #gongam {
-  font-size: 11dvh;
+  font-size: 8vh;
   grid-area: gongam;
   text-align: start;
   text-shadow: 15px 10px 10px rgb(24, 21, 39);
@@ -197,13 +212,13 @@
   width: 20dvw;
   max-width: 200px;
   min-width: 150px;
-  height: 6dvh;
+  height: 6vh;
   max-height: 50px;
   min-height: 25px;
   background-color: rgba(24, 21, 39, 0.6);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-radius: 5dvh;
+  border-radius: 5vh;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -221,14 +236,15 @@
   color: rgb(234, 225, 213);
 }
 .container__main__home__buttonbox:hover {
+  background-color: rgba(234, 225, 213, 0.4);
   box-shadow: 10px 10px 10px rgb(24, 21, 39);
   transform: translateX(-5px) translateY(-5px);
 }
-.container__main__home__buttonbox:hover span {
-  color: rgb(234, 225, 213);
+.container__main__home__buttonbox:hover span a {
+  color: rgb(24, 21, 39);
 }
 .container__main__about {
-  height: 50dvh;
+  height: 50vh;
   min-height: 300px;
   grid-area: about;
   background-image: url("../img/about.webp");
@@ -275,7 +291,7 @@
   width: 20dvw;
   max-width: 200px;
   min-width: 150px;
-  height: 6dvh;
+  height: 6vh;
   max-height: 50px;
   min-height: 25px;
   border-radius: 7dvw;
@@ -306,7 +322,7 @@
   visibility: visible;
 }
 .container__main__projects {
-  height: 50dvh;
+  height: 50vh;
   min-height: 300px;
   grid-area: projects;
   background-image: url("../img/projects.webp");
@@ -328,6 +344,7 @@
   text-align: end;
   text-shadow: 10px 10px 10px rgb(24, 21, 39);
   color: rgb(234, 225, 213);
+  margin-top: 2%;
 }
 .container__main__projects__contentbox a {
   position: absolute;
@@ -337,10 +354,10 @@
   width: 20dvw;
   max-width: 200px;
   min-width: 150px;
-  height: 6dvh;
+  height: 6vh;
   max-height: 50px;
   min-height: 25px;
-  border-radius: 3dvh;
+  border-radius: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,7 +378,7 @@
   transform: translateX(0);
 }
 .container__main__partners {
-  height: 50dvh;
+  height: 50vh;
   min-height: 300px;
   grid-area: partners;
   background-image: url("../img/partners.webp");
@@ -381,7 +398,7 @@
 }
 .container__main__partners__contentbox h3 {
   position: relative;
-  top: 80%;
+  top: 84%;
   width: 100%;
   height: 40px;
   font-size: 28px;
@@ -457,7 +474,7 @@
 }
 .container__main__contacts {
   grid-area: contacts;
-  height: 100dvh;
+  height: 100vh;
   min-height: 600px;
   background-image: url("../img/contacts.webp");
   background-repeat: no-repeat;
@@ -488,6 +505,13 @@
   font-size: 14px;
   text-align: start;
   width: 100%;
+}
+.container__main__contacts__contentbox__content a {
+  color: rgb(234, 225, 213);
+  transition: 0.3s;
+}
+.container__main__contacts__contentbox__content a:hover {
+  color: rgb(172, 15, 15);
 }
 .container__main__contacts__contentbox__media {
   width: 100%;
@@ -534,7 +558,7 @@
 }
 .container__main__footer__contentbox {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 15% 40% 40%;
   grid-template-rows: 90% 10%;
   grid-template-areas: "logo menu menu" "copy copy copy";
   gap: 10px;
@@ -542,14 +566,9 @@
 .container__main__footer__contentbox__logo {
   grid-area: logo;
   color: rgba(234, 225, 213, 0.4);
-  background-image: url("../img/logo.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
   display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-right: 10%;
+  justify-content: start;
+  align-items: end;
 }
 .container__main__footer__contentbox__media {
   grid-area: media;
@@ -596,13 +615,13 @@
     padding: 5px;
   }
   .container__main__partners__contentbox__list {
-    margin-top: 5dvh;
+    margin-top: 5vh;
   }
   .container__main__projects__contentbox a {
     left: calc(50% - 20dvw);
   }
   .container__main__contacts {
-    height: 85dvh;
+    height: 85vh;
   }
   .container__main__contacts__contentbox__map {
     height: 70%;
@@ -636,7 +655,7 @@
 
 .container__header {
   width: 80px;
-  height: 100dvh;
+  height: 100vh;
   position: fixed;
   z-index: 100;
 }
@@ -665,7 +684,7 @@
   grid-template-columns: calc(33.3333333333% + 80px) calc(33.3333333333% - 40px) calc(33.3333333333% - 40px);
 }
 .container__projectspage__list article {
-  height: 40dvh;
+  height: 40vh;
   min-height: 250px;
   max-height: 600px;
 }
@@ -705,13 +724,14 @@
   right: 10px;
   color: rgb(24, 21, 39);
   background-color: rgba(234, 225, 213, 0.4);
-  height: 30px;
+  height: 40px;
   width: 70%;
-  max-width: 150px;
+  max-width: 250px;
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
+  font-size: 16px;
 }
 .container__projectspage__list article:hover div button:hover {
   background-color: rgb(24, 21, 39);
@@ -744,7 +764,7 @@
 .container__projectspage__list__item4 {
   grid-column: span 2;
   grid-row: span 2;
-  height: 80dvh !important;
+  height: 80vh !important;
   background-image: url("../img/projects/004/1.webp");
   background-size: cover;
   background-position: bottom;
@@ -753,7 +773,7 @@
 }
 .container__projectspage__list__item5 {
   grid-row: span 2;
-  height: 80dvh !important;
+  height: 80vh !important;
   background-image: url("../img/projects/005/1.webp");
   background-size: cover;
   background-position: center;
@@ -807,13 +827,13 @@
   background-color: rgb(172, 15, 15);
 }
 .container__popup__contentbox {
-  width: calc(100dvh - 100px);
+  width: calc(100vh - 100px);
   height: calc(100dvw - 180px);
   margin: 50px 50px 50px 130px;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  transform: rotate(-90deg) translateY(calc((100dvh - 100px) * -1));
+  transform: rotate(-90deg) translateY(calc((100vh - 100px) * -1));
   transform-origin: top right;
 }
 .container__popup__contentbox::-webkit-scrollbar {
@@ -830,7 +850,7 @@
   display: none;
   flex: none;
   width: 100%;
-  height: calc(100dvh - 105px);
+  height: calc(100vh - 105px);
   text-align: center;
   transform: rotate(90deg);
   background-position: center;
@@ -840,18 +860,20 @@
 
 @media (max-width: 767px) {
   .container__projectspage__list {
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-direction: column;
   }
   .container__projectspage__list article {
     padding: 10px;
-    height: 50dvh !important;
+    height: 40vh !important;
   }
   .container__projectspage__list article h1 {
-    font-size: 18px !important;
+    font-size: 23px !important;
     margin: 0;
+    text-align: end;
   }
   .container__projectspage__list article p {
-    font-size: 14px;
+    font-size: 18px;
   }
   .container__projectspage__list__item1 h1 {
     text-align: end;
@@ -859,13 +881,22 @@
   .container__projectspage__list__item6 {
     grid-column: span 1;
   }
+  .container__projectspage__list__button {
+    width: calc(100% - 20px) !important;
+    max-width: 800px !important;
+    height: 50px !important;
+    font-size: 23px;
+    border-radius: 25px !important;
+  }
   .container__popup__contentbox {
-    margin: 0px 10px 10px 10px;
-    width: calc(100dvh - 20px);
-    height: calc(100dvw - 20px);
-    transform: rotate(-90deg) translateY(calc((100dvh - 20px) * -1));
+    margin: 10% 5% 0% 5%;
+    width: 90%;
+    height: 90%;
+    transform: rotate(0deg) translateY(0);
   }
   .container__popup__contentbox__item {
-    height: calc(100dvh - 30px);
+    background-size: contain;
+    height: 50%;
+    transform: rotate(0deg);
   }
 }/*# sourceMappingURL=projects.css.map */

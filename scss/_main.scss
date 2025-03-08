@@ -3,7 +3,7 @@
   grid-template-columns: calc(33.333% + 80px) calc(33.333% - 40px) calc(
       33.333% - 40px
     );
-  // grid-template-rows: 100dvh 50dvh 50dvh 25dvh;
+  // grid-template-rows: 100vh 50vh 50vh 25vh;
   grid-template-areas:
     "home home home"
     "about partners contacts"
@@ -13,7 +13,7 @@
 
   &__home {
     grid-area: home;
-    height: 100dvh;
+    height: 100vh;
     min-height: 500px;
     background-image: url("../img/home.webp");
     background-size: cover;
@@ -21,6 +21,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+    transition: all 0.3s;
 
     &__titlebox {
       margin: 170px 20px 20px 100px;
@@ -31,25 +32,18 @@
         "gongam";
 
       #design {
-        font-size: 6dvh;
+        font-size: 4vh;
         grid-area: design;
         text-align: start;
         text-shadow: 15px 10px 10px $backdack;
       }
 
       #gongam {
-        font-size: 11dvh;
+        font-size: 8vh;
         grid-area: gongam;
         text-align: start;
         text-shadow: 15px 10px 10px $backdack;
       }
-
-      // #studio {
-      //   font-size: 4em;
-      //   grid-area: studio;
-      //   text-align: end;
-      //   text-shadow: 15px 10px 10px $backdack;
-      // }
     }
 
     &__buttonbox {
@@ -59,12 +53,12 @@
       width: 20dvw;
       max-width: 200px;
       min-width: 150px;
-      height: 6dvh;
+      height: 6vh;
       max-height: 50px;
       min-height: 25px;
       background-color: $backdarktr;
       backdrop-filter: blur(10px);
-      border-radius: 5dvh;
+      border-radius: 5vh;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -84,18 +78,21 @@
       }
 
       &:hover {
+        background-color: $backlight;
         box-shadow: 10px 10px 10px $backdack;
         transform: translateX(-5px) translateY(-5px);
 
         span {
-          color: $textlight;
+          a {
+            color: $backdack;
+          }
         }
       }
     }
   }
 
   &__about {
-    height: 50dvh;
+    height: 50vh;
     min-height: 300px;
     grid-area: about;
     background-image: url("../img/about.webp");
@@ -144,7 +141,7 @@
         width: 20dvw;
         max-width: 200px;
         min-width: 150px;
-        height: 6dvh;
+        height: 6vh;
         max-height: 50px;
         min-height: 25px;
         border-radius: 7dvw;
@@ -182,7 +179,7 @@
   }
 
   &__projects {
-    height: 50dvh;
+    height: 50vh;
     min-height: 300px;
     grid-area: projects;
     background-image: url("../img/projects.webp");
@@ -206,6 +203,7 @@
         text-align: end;
         text-shadow: 10px 10px 10px $backdack;
         color: $textlight;
+        margin-top: 2%;
       }
 
       a {
@@ -216,10 +214,10 @@
         width: 20dvw;
         max-width: 200px;
         min-width: 150px;
-        height: 6dvh;
+        height: 6vh;
         max-height: 50px;
         min-height: 25px;
-        border-radius: 3dvh;
+        border-radius: 3vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -246,7 +244,7 @@
   }
 
   &__partners {
-    height: 50dvh;
+    height: 50vh;
     min-height: 300px;
     grid-area: partners;
     background-image: url("../img/partners.webp");
@@ -266,7 +264,7 @@
 
       h3 {
         position: relative;
-        top: 80%;
+        top: 84%;
         width: 100%;
         height: 40px;
         font-size: 28px;
@@ -355,7 +353,7 @@
 
   &__contacts {
     grid-area: contacts;
-    height: 100dvh;
+    height: 100vh;
     min-height: 600px;
     background-image: url("../img/contacts.webp");
     background-repeat: no-repeat;
@@ -388,6 +386,15 @@
         font-size: 14px;
         text-align: start;
         width: 100%;
+
+        a {
+          color: $textlight;
+          transition: 0.3s;
+
+          &:hover {
+            color: $activebutton;
+          }
+        }
       }
 
       &__media {
@@ -445,7 +452,7 @@
 
     &__contentbox {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 15% 40% 40%;
       grid-template-rows: 90% 10%;
       grid-template-areas:
         "logo menu menu"
@@ -455,14 +462,13 @@
       &__logo {
         grid-area: logo;
         color: $backlight;
-        background-image: url("../img/logo.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: left;
+        // background-image: url("../img/logo.webp");
+        // background-size: contain;
+        // background-repeat: no-repeat;
+        // background-position: left;
         display: flex;
-        justify-content: end;
-        align-items: center;
-        padding-right: 10%;
+        justify-content: start;
+        align-items: end;
       }
 
       &__media {
@@ -497,75 +503,75 @@
   }
 }
 
-// @media (max-width: 767px) {
-//   .container__main {
-//     grid-template-columns: 1fr;
-//     grid-template-areas: "home" "about" "partners" "projects" "contacts" "footer";
+@media (max-width: 767px) {
+  .container__main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "home" "about" "partners" "projects" "contacts" "footer";
 
-//     &__home {
-//       &__titlebox {
-//         font-size: 23px;
-//         margin: 150px 0 50px 0;
+    &__home {
+      &__titlebox {
+        font-size: 23px;
+        margin: 150px 0 50px 0;
 
-//         h1 {
-//           width: 100%;
-//           text-align: center !important;
-//         }
-//       }
+        h1 {
+          width: 100%;
+          text-align: center !important;
+        }
+      }
 
-//       &__buttonbox {
-//         left: calc(50% - 20dvw);
-//       }
-//     }
+      &__buttonbox {
+        left: calc(50% - 20dvw);
+      }
+    }
 
-//     &__about {
-//       padding: 5px;
-//     }
+    &__about {
+      padding: 5px;
+    }
 
-//     &__partners {
-//       &__contentbox {
-//         &__list {
-//           margin-top: 5dvh;
-//         }
-//       }
-//     }
+    &__partners {
+      &__contentbox {
+        &__list {
+          margin-top: 5vh;
+        }
+      }
+    }
 
-//     &__projects {
-//       &__contentbox {
-//         a {
-//           left: calc(50% - 20dvw);
-//         }
-//       }
-//     }
+    &__projects {
+      &__contentbox {
+        a {
+          left: calc(50% - 20dvw);
+        }
+      }
+    }
 
-//     &__contacts {
-//       height: 85dvh;
-//       &__contentbox {
-//         &__map {
-//           height: 70%;
-//         }
-//       }
-//     }
+    &__contacts {
+      height: 85vh;
+      &__contentbox {
+        &__map {
+          height: 70%;
+        }
+      }
+    }
 
-//     &__footer {
-//       padding: 10px 5px;
+    &__footer {
+      padding: 10px 5px;
 
-//       &__contentbox {
-//         grid-template-columns: repeat(2, 1fr);
-//         grid-template-rows: repeat(2, auto);
-//         grid-template-areas: "logo menu" "copy copy";
+      &__contentbox {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "logo menu" "copy copy";
 
-//         &__menu {
-//           flex-direction: column;
-//           flex-wrap: wrap;
-//           justify-content: start;
+        &__menu {
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: start;
 
-//           a {
-//             display: inline;
-//             font-size: 10px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+          a {
+            display: inline;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

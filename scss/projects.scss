@@ -15,7 +15,7 @@
       calc((100% / 3) - 40px);
 
     article {
-      height: 40dvh;
+      height: 40vh;
       min-height: 250px;
       max-height: 600px;
 
@@ -60,13 +60,14 @@
             right: 10px;
             color: $backdack;
             background-color: $backlight;
-            height: 30px;
+            height: 40px;
             width: 70%;
-            max-width: 150px;
+            max-width: 250px;
             border: none;
-            border-radius: 15px;
+            border-radius: 20px;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 16px;
 
             &:hover {
               background-color: $backdack;
@@ -107,7 +108,7 @@
     &__item4 {
       grid-column: span 2;
       grid-row: span 2;
-      height: 80dvh !important;
+      height: 80vh !important;
       background-image: url("../img/projects/004/1.webp");
       background-size: cover;
       background-position: bottom;
@@ -117,7 +118,7 @@
 
     &__item5 {
       grid-row: span 2;
-      height: 80dvh !important;
+      height: 80vh !important;
       background-image: url("../img/projects/005/1.webp");
       background-size: cover;
       background-position: center;
@@ -177,13 +178,13 @@
   }
 
   &__contentbox {
-    width: calc(100dvh - 100px);
+    width: calc(100vh - 100px);
     height: calc(100dvw - 180px);
     margin: 50px 50px 50px 130px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    transform: rotate(-90deg) translateY(calc((100dvh - 100px) * (-1)));
+    transform: rotate(-90deg) translateY(calc((100vh - 100px) * (-1)));
     transform-origin: top right;
 
     &::-webkit-scrollbar {
@@ -203,7 +204,7 @@
       display: none;
       flex: none;
       width: 100%;
-      height: calc(100dvh - 105px);
+      height: calc(100vh - 105px);
       text-align: center;
       transform: rotate(90deg);
       background-position: center;
@@ -219,19 +220,21 @@
 
 @media (max-width: 767px) {
   .container__projectspage__list {
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-direction: column;
 
     article {
       padding: 10px;
-      height: 50dvh !important;
+      height: 40vh !important;
 
       h1 {
-        font-size: 18px !important;
+        font-size: 23px !important;
         margin: 0;
+        text-align: end;
       }
 
       p {
-        font-size: 14px;
+        font-size: 18px;
       }
     }
 
@@ -246,15 +249,25 @@
     }
   }
 
+  .container__projectspage__list__button {
+    width: calc(100% - 20px) !important;
+    max-width: 800px !important;
+    height: 50px !important;
+    font-size: 23px;
+    border-radius: 25px !important;
+  }
+
   .container__popup {
     &__contentbox {
-      margin: 0px 10px 10px 10px;
-      width: calc(100dvh - 20px);
-      height: calc(100dvw - 20px);
-      transform: rotate(-90deg) translateY(calc((100dvh - 20px) * (-1)));
+      margin: 10% 5% 0% 5%;
+      width: 90%;
+      height: 90%;
+      transform: rotate(0deg) translateY(0);
 
       &__item {
-        height: calc(100dvh - 30px);
+        background-size: contain;
+        height: 50%;
+        transform: rotate(0deg);
       }
     }
   }
