@@ -77,7 +77,8 @@
         }
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         background-color: $backlight;
         box-shadow: 10px 10px 10px $backdack;
         transform: translateX(-5px) translateY(-5px);
@@ -149,7 +150,8 @@
         visibility: hidden;
         transition: all 0.3s;
 
-        &:hover {
+        &:hover,
+        &:active {
           background-color: $backdarktr;
           color: $textlight;
           box-shadow: 5px 5px 10px $backdack;
@@ -157,7 +159,8 @@
         }
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         background-color: $backdarktr;
         backdrop-filter: blur(10px);
 
@@ -227,7 +230,8 @@
         backdrop-filter: blur(5px);
         transform: translateX(-500px);
 
-        &:hover {
+        &:hover,
+        &:active {
           background-color: $backlight;
           color: $backdack;
           box-shadow: 5px 5px 10px $backdack;
@@ -235,7 +239,8 @@
         }
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         a {
           transform: translateX(0);
         }
@@ -335,7 +340,8 @@
         }
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         background-color: $backlight;
         backdrop-filter: blur(5px);
 
@@ -414,7 +420,8 @@
             border-radius: 10px;
           }
 
-          &:hover {
+          &:hover,
+          &:active {
             filter: drop-shadow(10px 10px 10px $backdack);
             transform: translateX(-5px) translateY(-5px);
 
@@ -430,7 +437,8 @@
         height: 50%;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         background-color: $backdarktr;
         backdrop-filter: blur(10px);
 
@@ -493,7 +501,8 @@
           font-size: 14px;
           transition: all 0.3s;
 
-          &:hover {
+          &:hover,
+          &:active {
             color: $textlight;
             border-bottom: 1px solid $textlight;
           }
