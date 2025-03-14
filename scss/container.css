@@ -198,12 +198,22 @@
   grid-area: design;
   text-align: start;
   text-shadow: 15px 10px 10px rgb(24, 21, 39);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
 }
 .container__main__home__titlebox #gongam {
   font-size: 8vh;
   grid-area: gongam;
   text-align: start;
   text-shadow: 15px 10px 10px rgb(24, 21, 39);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease 0.2s;
+}
+.container__main__home__titlebox ._anim-active {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
 }
 .container__main__home__buttonbox {
   position: absolute;
@@ -235,12 +245,12 @@
 .container__main__home__buttonbox span a {
   color: rgb(234, 225, 213);
 }
-.container__main__home__buttonbox:hover {
+.container__main__home__buttonbox:hover, .container__main__home__buttonbox:focus, .container__main__home__buttonbox:target {
   background-color: rgba(234, 225, 213, 0.4);
   box-shadow: 10px 10px 10px rgb(24, 21, 39);
   transform: translateX(-5px) translateY(-5px);
 }
-.container__main__home__buttonbox:hover span a {
+.container__main__home__buttonbox:hover span a, .container__main__home__buttonbox:focus span a, .container__main__home__buttonbox:target span a {
   color: rgb(24, 21, 39);
 }
 .container__main__about {
@@ -299,26 +309,26 @@
   visibility: hidden;
   transition: all 0.3s;
 }
-.container__main__about__titlebox a:hover {
+.container__main__about__titlebox a:hover, .container__main__about__titlebox a:focus, .container__main__about__titlebox a:target {
   background-color: rgba(24, 21, 39, 0.6);
   color: rgb(234, 225, 213);
   box-shadow: 5px 5px 10px rgb(24, 21, 39);
   transform: translateX(-3px) translateY(-3px);
 }
-.container__main__about__titlebox:hover {
+.container__main__about__titlebox:hover, .container__main__about__titlebox:focus, .container__main__about__titlebox:target {
   background-color: rgba(24, 21, 39, 0.6);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-.container__main__about__titlebox:hover h3 {
+.container__main__about__titlebox:hover h3, .container__main__about__titlebox:focus h3, .container__main__about__titlebox:target h3 {
   top: 0;
   font-size: 28px;
   color: rgb(234, 225, 213);
 }
-.container__main__about__titlebox:hover p {
+.container__main__about__titlebox:hover p, .container__main__about__titlebox:focus p, .container__main__about__titlebox:target p {
   visibility: visible;
 }
-.container__main__about__titlebox:hover a {
+.container__main__about__titlebox:hover a, .container__main__about__titlebox:focus a, .container__main__about__titlebox:target a {
   visibility: visible;
 }
 .container__main__projects {
@@ -368,13 +378,13 @@
           backdrop-filter: blur(5px);
   transform: translateX(-500px);
 }
-.container__main__projects__contentbox a:hover {
+.container__main__projects__contentbox a:hover, .container__main__projects__contentbox a:focus, .container__main__projects__contentbox a:target {
   background-color: rgba(234, 225, 213, 0.4);
   color: rgb(24, 21, 39);
   box-shadow: 5px 5px 10px rgb(24, 21, 39);
   transform: translateX(-3px) translateY(-3px);
 }
-.container__main__projects__contentbox:hover a {
+.container__main__projects__contentbox:hover a, .container__main__projects__contentbox:focus a, .container__main__projects__contentbox:target a {
   transform: translateX(0);
 }
 .container__main__partners {
@@ -460,16 +470,16 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.container__main__partners__contentbox:hover {
+.container__main__partners__contentbox:hover, .container__main__partners__contentbox:focus, .container__main__partners__contentbox:target {
   background-color: rgba(234, 225, 213, 0.4);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-.container__main__partners__contentbox:hover h3 {
+.container__main__partners__contentbox:hover h3, .container__main__partners__contentbox:focus h3, .container__main__partners__contentbox:target h3 {
   color: rgb(24, 21, 39);
   top: 0;
 }
-.container__main__partners__contentbox:hover div {
+.container__main__partners__contentbox:hover div, .container__main__partners__contentbox:focus div, .container__main__partners__contentbox:target div {
   display: flex;
 }
 .container__main__contacts {
@@ -529,26 +539,26 @@
   fill: transparent;
   border-radius: 10px;
 }
-.container__main__contacts__contentbox__media a:hover {
+.container__main__contacts__contentbox__media a:hover, .container__main__contacts__contentbox__media a:focus, .container__main__contacts__contentbox__media a:target {
   filter: drop-shadow(10px 10px 10px rgb(24, 21, 39));
   transform: translateX(-5px) translateY(-5px);
 }
-.container__main__contacts__contentbox__media a:hover svg {
+.container__main__contacts__contentbox__media a:hover svg, .container__main__contacts__contentbox__media a:focus svg, .container__main__contacts__contentbox__media a:target svg {
   fill: rgb(172, 15, 15);
 }
 .container__main__contacts__contentbox__map {
   width: 100%;
   height: 50%;
 }
-.container__main__contacts__contentbox:hover {
+.container__main__contacts__contentbox:hover, .container__main__contacts__contentbox:focus, .container__main__contacts__contentbox:target {
   background-color: rgba(24, 21, 39, 0.6);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-.container__main__contacts__contentbox:hover div {
+.container__main__contacts__contentbox:hover div, .container__main__contacts__contentbox:focus div, .container__main__contacts__contentbox:target div {
   visibility: visible;
 }
-.container__main__contacts__contentbox:hover svg {
+.container__main__contacts__contentbox:hover svg, .container__main__contacts__contentbox:focus svg, .container__main__contacts__contentbox:target svg {
   fill: rgb(234, 225, 213);
 }
 .container__main__footer {
@@ -590,7 +600,7 @@
   font-size: 14px;
   transition: all 0.3s;
 }
-.container__main__footer__contentbox__menu a:hover {
+.container__main__footer__contentbox__menu a:hover, .container__main__footer__contentbox__menu a:focus, .container__main__footer__contentbox__menu a:target {
   color: rgb(234, 225, 213);
   border-bottom: 1px solid rgb(234, 225, 213);
 }

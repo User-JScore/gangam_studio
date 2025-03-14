@@ -36,6 +36,9 @@
         grid-area: design;
         text-align: start;
         text-shadow: 15px 10px 10px $backdack;
+        transform: translateY(40px);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
       }
 
       #gongam {
@@ -43,6 +46,14 @@
         grid-area: gongam;
         text-align: start;
         text-shadow: 15px 10px 10px $backdack;
+        transform: translateY(40px);
+        opacity: 0;
+        transition: all 0.8s ease 0.2s;
+      }
+
+      ._anim-active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
       }
     }
 
@@ -78,7 +89,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:target {
         background-color: $backlight;
         box-shadow: 10px 10px 10px $backdack;
         transform: translateX(-5px) translateY(-5px);
@@ -151,7 +163,8 @@
         transition: all 0.3s;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:target {
           background-color: $backdarktr;
           color: $textlight;
           box-shadow: 5px 5px 10px $backdack;
@@ -160,7 +173,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:target {
         background-color: $backdarktr;
         backdrop-filter: blur(10px);
 
@@ -231,7 +245,8 @@
         transform: translateX(-500px);
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:target {
           background-color: $backlight;
           color: $backdack;
           box-shadow: 5px 5px 10px $backdack;
@@ -240,7 +255,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:target {
         a {
           transform: translateX(0);
         }
@@ -341,7 +357,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:target {
         background-color: $backlight;
         backdrop-filter: blur(5px);
 
@@ -421,7 +438,8 @@
           }
 
           &:hover,
-          &:focus {
+          &:focus,
+          &:target {
             filter: drop-shadow(10px 10px 10px $backdack);
             transform: translateX(-5px) translateY(-5px);
 
@@ -438,7 +456,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:target {
         background-color: $backdarktr;
         backdrop-filter: blur(10px);
 
@@ -502,7 +521,8 @@
           transition: all 0.3s;
 
           &:hover,
-          &:focus {
+          &:focus,
+          &:target {
             color: $textlight;
             border-bottom: 1px solid $textlight;
           }
