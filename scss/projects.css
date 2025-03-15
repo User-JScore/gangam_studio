@@ -749,6 +749,7 @@
 }
 .container__projectspage {
   background-attachment: fixed;
+  background-color: rgb(24, 21, 39);
 }
 .container__projectspage__list {
   width: 100%;
@@ -882,6 +883,8 @@
   padding: 10px;
 }
 .container__projectspage__list__item9 {
+  grid-row: span 2;
+  height: 80vh !important;
   background-image: url("../img/projects/009/250210_js1_244 복사.webp");
   background-size: cover;
   background-position: center;
@@ -890,6 +893,14 @@
 }
 .container__projectspage__list__item10 {
   background-image: url("../img/projects/010/7_Post.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+.container__projectspage__list__item11 {
+  grid-column: span 2;
+  background-image: url("../img/projects/011/IMG_9529.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

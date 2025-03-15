@@ -4,6 +4,7 @@
 
 .container__projectspage {
   background-attachment: fixed;
+  background-color: $backdack;
 
   &__list {
     width: 100%;
@@ -163,6 +164,8 @@
     }
 
     &__item9 {
+      grid-row: span 2;
+      height: 80vh !important;
       background-image: url("../img/projects/009/250210_js1_244 복사.webp");
       background-size: cover;
       background-position: center;
@@ -172,6 +175,15 @@
 
     &__item10 {
       background-image: url("../img/projects/010/7_Post.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px;
+    }
+
+    &__item11 {
+      grid-column: span 2;
+      background-image: url("../img/projects/011/IMG_9529.webp");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
