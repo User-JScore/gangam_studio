@@ -286,7 +286,7 @@
   transition: all 0.5s;
 }
 .container__main__about__titlebox p {
-  visibility: hidden;
+  opacity: 0;
   font-size: 14px;
   text-align: justify;
   transition: all 0.3s;
@@ -306,7 +306,7 @@
   min-height: 25px;
   border-radius: 7dvw;
   margin: 0 auto;
-  visibility: hidden;
+  opacity: 0;
   transition: all 0.3s;
 }
 .container__main__about__titlebox a:hover, .container__main__about__titlebox a:focus, .container__main__about__titlebox a:target {
@@ -326,10 +326,10 @@
   color: rgb(234, 225, 213);
 }
 .container__main__about__titlebox:hover p, .container__main__about__titlebox:focus p, .container__main__about__titlebox:target p {
-  visibility: visible;
+  opacity: 1;
 }
 .container__main__about__titlebox:hover a, .container__main__about__titlebox:focus a, .container__main__about__titlebox:target a {
-  visibility: visible;
+  opacity: 1;
 }
 .container__main__projects {
   height: 50vh;
@@ -504,7 +504,7 @@
   transition: all 0.5s;
 }
 .container__main__contacts__contentbox div {
-  visibility: hidden;
+  opacity: 0;
 }
 .container__main__contacts__contentbox h3 {
   font-size: 28px;
@@ -549,6 +549,22 @@
 .container__main__contacts__contentbox__map {
   width: 100%;
   height: 50%;
+  position: relative;
+}
+.container__main__contacts__contentbox__map__blur {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: grayscale(80%);
+          backdrop-filter: grayscale(80%);
+  transition: all 0.3s;
+}
+.container__main__contacts__contentbox__map__blur:hover, .container__main__contacts__contentbox__map__blur:focus, .container__main__contacts__contentbox__map__blur:target {
+  -webkit-backdrop-filter: grayscale(0);
+          backdrop-filter: grayscale(0);
 }
 .container__main__contacts__contentbox:hover, .container__main__contacts__contentbox:focus, .container__main__contacts__contentbox:target {
   background-color: rgba(24, 21, 39, 0.6);
@@ -556,7 +572,7 @@
           backdrop-filter: blur(10px);
 }
 .container__main__contacts__contentbox:hover div, .container__main__contacts__contentbox:focus div, .container__main__contacts__contentbox:target div {
-  visibility: visible;
+  opacity: 1;
 }
 .container__main__contacts__contentbox:hover svg, .container__main__contacts__contentbox:focus svg, .container__main__contacts__contentbox:target svg {
   fill: rgb(234, 225, 213);
@@ -610,6 +626,9 @@
     grid-template-columns: 1fr;
     grid-template-areas: "home" "about" "partners" "projects" "contacts" "footer";
   }
+  .container__main__home {
+    background-size: 1500px;
+  }
   .container__main__home__titlebox {
     font-size: 23px;
     margin: 150px 0 50px 0;
@@ -624,17 +643,59 @@
   .container__main__about {
     padding: 5px;
   }
+  .container__main__about ._anim-active {
+    background-color: rgba(24, 21, 39, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .container__main__about ._anim-active h3 {
+    top: 0;
+    font-size: 28px;
+    color: rgb(234, 225, 213);
+  }
+  .container__main__about ._anim-active p {
+    opacity: 1;
+  }
+  .container__main__about ._anim-active a {
+    opacity: 1;
+  }
   .container__main__partners__contentbox__list {
     margin-top: 5vh;
   }
+  .container__main__partners ._anim-active {
+    background-color: rgba(234, 225, 213, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .container__main__partners ._anim-active h3 {
+    color: rgb(24, 21, 39);
+    top: 0;
+  }
+  .container__main__partners ._anim-active div {
+    display: flex;
+  }
   .container__main__projects__contentbox a {
     left: calc(50% - 20dvw);
+  }
+  .container__main__projects ._anim-active a {
+    transform: translateX(0);
   }
   .container__main__contacts {
     height: 85vh;
   }
   .container__main__contacts__contentbox__map {
     height: 70%;
+  }
+  .container__main__contacts ._anim-active {
+    background-color: rgba(24, 21, 39, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .container__main__contacts ._anim-active div {
+    opacity: 1;
+  }
+  .container__main__contacts ._anim-active svg {
+    fill: rgb(234, 225, 213);
   }
   .container__main__footer {
     padding: 10px 5px;
@@ -709,11 +770,11 @@
   margin-bottom: 20px;
 }
 .container__projectspage__list article div p {
-  visibility: hidden;
+  opacity: 0;
   text-align: justify;
 }
 .container__projectspage__list article div button {
-  visibility: hidden;
+  opacity: 0;
 }
 .container__projectspage__list article:hover div, .container__projectspage__list article:focus div, .container__projectspage__list article:target div {
   width: 100%;
@@ -724,11 +785,11 @@
   padding: 5px;
 }
 .container__projectspage__list article:hover div p, .container__projectspage__list article:focus div p, .container__projectspage__list article:target div p {
-  visibility: visible;
+  opacity: 1;
   color: rgb(234, 225, 213);
 }
 .container__projectspage__list article:hover div button, .container__projectspage__list article:focus div button, .container__projectspage__list article:target div button {
-  visibility: visible;
+  opacity: 1;
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -890,6 +951,40 @@
   }
   .container__projectspage__list__item6 {
     grid-column: span 1;
+  }
+  ._anim-active {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 21, 39, 0.6);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    padding: 5px;
+  }
+  ._anim-active p {
+    opacity: 1 !important;
+    color: rgb(234, 225, 213);
+  }
+  ._anim-active button {
+    opacity: 1 !important;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(24, 21, 39);
+    background-color: rgba(234, 225, 213, 0.4);
+    height: 40px;
+    width: 70%;
+    max-width: 250px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+  }
+  ._anim-active button:hover, ._anim-active button:focus, ._anim-active button:target {
+    background-color: rgb(24, 21, 39);
+    color: rgb(234, 225, 213);
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: 10px 10px 10px rgb(24, 21, 39);
   }
   .container__projectspage__list__button {
     width: calc(100% - 20px) !important;

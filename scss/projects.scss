@@ -31,12 +31,12 @@
         }
 
         p {
-          visibility: hidden;
+          opacity: 0;
           text-align: justify;
         }
 
         button {
-          visibility: hidden;
+          opacity: 0;
         }
       }
 
@@ -51,12 +51,12 @@
           padding: 5px;
 
           p {
-            visibility: visible;
+            opacity: 1;
             color: $textlight;
           }
 
           button {
-            visibility: visible;
+            opacity: 1;
             position: absolute;
             bottom: 10px;
             right: 10px;
@@ -222,10 +222,6 @@
   }
 }
 
-// .container__popup-active {
-//   display: none !important;
-// }
-
 @media (max-width: 767px) {
   .container__projectspage__list {
     display: flex;
@@ -254,6 +250,45 @@
 
     &__item6 {
       grid-column: span 1;
+    }
+  }
+
+  ._anim-active {
+    width: 100%;
+    height: 100%;
+    background-color: $backdarktr;
+    backdrop-filter: blur(5px);
+    padding: 5px;
+
+    p {
+      opacity: 1 !important;
+      color: $textlight;
+    }
+
+    button {
+      opacity: 1 !important;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: $backdack;
+      background-color: $backlight;
+      height: 40px;
+      width: 70%;
+      max-width: 250px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 16px;
+
+      &:hover,
+      &:focus,
+      &:target {
+        background-color: $backdack;
+        color: $textlight;
+        transform: translateX(-5px) translateY(-5px);
+        box-shadow: 10px 10px 10px $backdack;
+      }
     }
   }
 
