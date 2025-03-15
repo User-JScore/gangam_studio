@@ -21,7 +21,9 @@
 
       div {
         position: relative;
-        transition: all 0.3s;
+        height: 100%;
+        width: 100%;
+        transition: all 0.3s ease 0.5s;
 
         h1 {
           color: $textlight;
@@ -33,10 +35,15 @@
         p {
           opacity: 0;
           text-align: justify;
+          transition: all 0.3s ease 0.5s;
         }
 
         button {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
           opacity: 0;
+          transition: all 0.3s ease 0.5s;
         }
       }
 
@@ -57,9 +64,6 @@
 
           button {
             opacity: 1;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
             color: $backdack;
             background-color: $backlight;
             height: 40px;
@@ -278,7 +282,6 @@
       border: none;
       border-radius: 20px;
       cursor: pointer;
-      transition: all 0.3s;
       font-size: 16px;
 
       &:hover,

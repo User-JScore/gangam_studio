@@ -21,8 +21,9 @@ if (animItems.length > 0) {
       ) {
         animItem.classList.add("_anim-active");
       } else {
-        if (!animItem.classList.contains("_anim-no-hide"))
+        if (!animItem.classList.contains("_anim-no-hide")) {
           animItem.classList.remove("_anim-active");
+        }
       }
     }
   }
