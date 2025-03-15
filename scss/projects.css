@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container__header {
   position: relative;
   -webkit-backdrop-filter: blur(10px);
@@ -628,6 +629,7 @@
   }
   .container__main__home {
     background-size: 1500px;
+    background-position: top;
   }
   .container__main__home__titlebox {
     font-size: 23px;
@@ -757,7 +759,6 @@
 .container__projectspage__list article {
   height: 40vh;
   min-height: 250px;
-  max-height: 600px;
 }
 .container__projectspage__list article div {
   position: relative;
@@ -863,6 +864,37 @@
   background-repeat: no-repeat;
   padding: 10px;
 }
+.container__projectspage__list__item7 {
+  grid-column: span 2;
+  background-image: url("../img/projects/007/1_Post.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 90px;
+}
+.container__projectspage__list__item8 {
+  grid-row: span 2;
+  height: 80vh !important;
+  background-image: url("../img/projects/008/241220_js1_099.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+.container__projectspage__list__item9 {
+  background-image: url("../img/projects/009/250210_js1_244 복사.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 90px;
+}
+.container__projectspage__list__item10 {
+  background-image: url("../img/projects/010/7_Post.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
 
 .container__popup {
   display: none;
@@ -953,8 +985,9 @@
   .container__projectspage__list__item1 h1 {
     text-align: end;
   }
-  .container__projectspage__list__item6 {
+  .container__projectspage__list div {
     grid-column: span 1;
+    grid-row: span 1;
   }
   ._anim-active {
     width: 100%;

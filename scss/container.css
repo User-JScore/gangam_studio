@@ -628,6 +628,7 @@
   }
   .container__main__home {
     background-size: 1500px;
+    background-position: top;
   }
   .container__main__home__titlebox {
     font-size: 23px;
